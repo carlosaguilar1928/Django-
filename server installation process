@@ -1,0 +1,25 @@
+#/bin/bash
+
+yum install python-pip
+pip install virtualenv        # allows you to run multiple python instances
+pip install --upgrade pip     # upgrades python 2 to python 3 on your environment
+mkdir /opt/django             # create a directory in which you will run your django server
+cd /opt/django                # cd into that directory 
+yum install epel-release
+yum install python34 python-pip
+virtualenv -p python3 django   # specify which verstion django you want
+cd django
+source bin/activate            # activates virtualenv
+python --version              # double checks virtualenv is poiting to the right version of python
+
+pip install django            # now we can install django 
+django-admin --version        
+django-admin startproject project1  # create or first project called project1
+chown -R carlosaguilar1928 django   # run this as a user and not as root, chown it to allow the user permission
+exit 
+
+source /opt/django/django/bin/activate    #source it again since exiting from the server will take away the source 
+su - carlosaguilar1928
+
+/opt/django/project1/manage.py runserver 0.0.0.0:8000&  #amperstand & notifies the server to run in the background and stay active
+yum install git
