@@ -1,0 +1,33 @@
+#!/usr/bin/python
+
+import sys	# imports the "sys" module
+import re	  # imports the "re" module
+
+suits = { 
+	'Bashful':'yellow', 'Sneezy':'brown', 'Doc':'orange', 'Grumpy':'red', 
+	'Dopey':'green', 'Happy':'blue', 'Sleepy':'taupe'
+}
+
+# this line of code assings a dictionary to the variable "suits"
+
+pattern = re.compile("(%s)" % sys.argv[1])
+
+"""here the variable "pattern" is assigned a the functions re.compile, then 
+the string formatting operator % (pg 219) takes the string on its left "(%)" and 
+inserts it on its right, at the right side we have another function "sys.argv[1]"
+which is a list slice"""
+
+for dwarf, color in suits.item():
+	if pattern.search(dwarf or pattern.search(color):
+		print("%s's dwarf suit is %s." %
+			(pattern.sub(r"_\1_", dwarf), pattern.sub(r"_\1_"color)))
+		break
+	else:
+		print("No dwarves or dwarf suits matched the pattern.")
+
+"""in the previous code the for..in statement creates a loop that iterates
+thru the range of suit.item"""
+"""the if statement is a conditional statement that if met will print a message 
+if at least one of the "or" boolean operator statements is true"""
+"""the else statement is a conditional statement that prints another message 
+if the "IF" statement is not met"""
