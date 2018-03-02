@@ -1,0 +1,591 @@
+sudo su
+[root@admin carlosaguilar1928]# yum install google-cloud.sdk
+Loaded plugins: fastestmirror
+base                                                                                        | 3.6 kB  00:00:00     
+epel/x86_64/metalink                                                                        |  11 kB  00:00:00     
+epel                                                                                        | 4.7 kB  00:00:00     
+
+http://mirror.lug.udel.edu/pub/centos/7.4.1708/extras/x86_64/repodata/repomd.xml: [Errno 12] Timeout on http://mirror.lug.udel.edu/pub/centos/7.4.1708/extras/x86_64/repodata/repomd.xml: (28, 'Operation too slow. Less than 1000 bytes/sec transferred the last 30 seconds')
+Trying other mirror.
+extras                                                                                      | 3.4 kB  00:00:00     
+google-cloud-compute/signature                                                              |  454 B  00:00:00     
+google-cloud-compute/signature                                                              | 1.8 kB  00:00:00 !!! 
+google-cloud-sdk/signature                                                                  |  454 B  00:00:00     
+google-cloud-sdk/signature                                                                  | 1.4 kB  00:00:00 !!! 
+updates                                                                                     | 3.4 kB  00:00:00     
+(1/10): base/7/x86_64/group_gz                                                              | 156 kB  00:00:00     
+(2/10): epel/x86_64/group_gz                                                                | 266 kB  00:00:00     
+(3/10): epel/x86_64/updateinfo                                                              | 900 kB  00:00:00     
+(4/10): epel/x86_64/primary_db                                                              | 6.3 MB  00:00:00     
+(5/10): extras/7/x86_64/primary_db                                                          | 166 kB  00:00:00     
+(6/10): google-cloud-compute/updateinfo                                                     | 1.1 kB  00:00:00     
+(7/10): google-cloud-compute/primary                                                        | 3.5 kB  00:00:00     
+(8/10): google-cloud-sdk/primary                                                            |  61 kB  00:00:00     
+(9/10): updates/7/x86_64/primary_db                                                         | 6.0 MB  00:00:00     
+(10/10): base/7/x86_64/primary_db                                                           | 5.7 MB  00:00:02     
+Determining fastest mirrors
+ * base: mirror.linux.duke.edu
+ * epel: mirror.cogentco.com
+ * extras: repo1.ash.innoscale.net
+ * updates: ftp.osuosl.org
+google-cloud-compute                                                                                           9/9
+google-cloud-sdk                                                                                           401/401
+No package google-cloud.sdk available.
+Error: Nothing to do
+[root@admin carlosaguilar1928]# 
+[root@admin carlosaguilar1928]# glcloud init
+bash: glcloud: command not found
+[root@admin carlosaguilar1928]# gcloud init
+Welcome! This command will take you through the configuration of gcloud.
+
+Your current configuration has been set to: [default]
+
+You can skip diagnostics next time by using the following flag:
+  gcloud init --skip-diagnostics
+
+Network diagnostic detects and fixes local network connection issues.
+Checking network connection...done.                                                                               
+Reachability Check passed.
+Network diagnostic (1/1 checks) passed.
+
+Choose the account you would like to use to perform operations for 
+this configuration:
+ [1] 247899449751-compute@developer.gserviceaccount.com
+ [2] Log in with a new account
+Please enter your numeric choice:  2
+
+
+You are running on a Google Compute Engine virtual machine.
+It is recommended that you use service accounts for authentication.
+
+You can run:
+
+  $ gcloud config set account `ACCOUNT`
+
+to switch accounts if necessary.
+
+Your credentials may be visible to others with access to this
+virtual machine. Are you sure you want to authenticate with
+your personal account?
+
+Do you want to continue (Y/n)?  y
+
+Go to the following link in your browser:
+
+    https://accounts.google.com/o/oauth2/auth?redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&prompt=select_account&response_type=code&client_id=32555940559.apps.googleusercontent.com&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fappengine.admin+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcompute+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Faccounts.reauth&access_type=offline
+
+
+Enter verification code: 4/AAA02-onA-3EObrXDwKdiZ6EFWf35-zq50YbB2UOjT_eD1lmVMLKc34
+You are logged in as: [carlosaguilar1928@gmail.com].
+
+Pick cloud project to use: 
+ [1] intense-reason-191902
+ [2] Create a new project
+Please enter numeric choice or text value (must exactly match list 
+item):  1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ [35] asia-south1-a
+ [36] australia-southeast1-b
+ [37] australia-southeast1-c
+ [38] australia-southeast1-a
+ [39] southamerica-east1-b
+ [40] southamerica-east1-c
+ [41] southamerica-east1-a
+ [42] northamerica-northeast1-a
+ [43] northamerica-northeast1-b
+ [44] northamerica-northeast1-c
+ [45] Do not set default zone
+Please enter numeric choice or text value (must exactly match list 
+item):  us-east1-b
+
+Your project default Compute Engine zone has been set to [us-east1-b].
+You can change it by running [gcloud config set compute/zone NAME].
+
+Your project default Compute Engine region has been set to [us-east1].
+You can change it by running [gcloud config set compute/region NAME].
+
+Created a default .boto configuration file at [/root/.boto]. See this file and
+[https://cloud.google.com/storage/docs/gsutil/commands/config] for more
+information about configuring Google Cloud Storage.
+Your Google Cloud SDK is configured and ready to use!
+
+* Commands that require authentication will use carlosaguilar1928@gmail.com by default
+* Commands will reference project `intense-reason-191902` by default
+* Compute Engine commands will use region `us-east1` by default
+* Compute Engine commands will use zone `us-east1-b` by default
+
+Run `gcloud help config` to learn how to change individual settings
+
+This gcloud configuration is called [default]. You can create additional configurations if you work with multiple accounts and/or projects.
+Run `gcloud topic configurations` to learn more.
+
+Some things to try next:
+
+* Run `gcloud --help` to see the Cloud Platform services you can interact with. And run `gcloud help COMMAND` to get help on any gcloud command.
+* Run `gcloud topic -h` to learn about advanced features of the SDK like arg files and output formatting
+[root@admin carlosaguilar1928]# gcloud help
+[root@admin carlosaguilar1928]# gcloud compute instances list
+NAME            ZONE        MACHINE_TYPE  PREEMPTIBLE  INTERNAL_IP  EXTERNAL_IP   STATUS
+admin           us-east1-b  f1-micro                   10.142.0.4   35.227.18.70  RUNNING
+apache-server2  us-east1-b  f1-micro                   10.142.0.3                 TERMINATED
+django          us-east1-b  f1-micro                   10.142.0.2                 TERMINATED
+[root@admin carlosaguilar1928]# yum install python-pip
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirror.linux.duke.edu
+ * epel: mirror.cogentco.com
+ * extras: repo1.ash.innoscale.net
+ * updates: ftp.osuosl.org
+Resolving Dependencies
+--> Running transaction check
+---> Package python2-pip.noarch 0:8.1.2-5.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+===================================================================================================================
+ Package                       Arch                     Version                       Repository              Size
+===================================================================================================================
+Installing:
+ python2-pip                   noarch                   8.1.2-5.el7                   epel                   1.7 M
+
+Transaction Summary
+===================================================================================================================
+Install  1 Package
+
+Total download size: 1.7 M
+Installed size: 7.2 M
+Is this ok [y/d/N]: y
+Downloading packages:
+python2-pip-8.1.2-5.el7.noarch.rpm                                                          | 1.7 MB  00:00:00     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : python2-pip-8.1.2-5.el7.noarch                                                                  1/1 
+  Verifying  : python2-pip-8.1.2-5.el7.noarch                                                                  1/1 
+
+Installed:
+  python2-pip.noarch 0:8.1.2-5.el7                                                                                 
+
+Complete!
+[root@admin carlosaguilar1928]# pip install --upgrade pip
+Collecting pip
+  Downloading pip-9.0.1-py2.py3-none-any.whl (1.3MB)
+    100% |████████████████████████████████| 1.3MB 809kB/s 
+Installing collected packages: pip
+  Found existing installation: pip 8.1.2
+    Uninstalling pip-8.1.2:
+      Successfully uninstalled pip-8.1.2
+Successfully installed pip-9.0.1
+[root@admin carlosaguilar1928]# pip install oauth2client
+Collecting oauth2client
+  Downloading oauth2client-4.1.2-py2.py3-none-any.whl (99kB)
+    100% |████████████████████████████████| 102kB 2.4MB/s 
+Requirement already satisfied: pyasn1>=0.1.7 in /usr/lib/python2.7/site-packages (from oauth2client)
+Collecting pyasn1-modules>=0.0.5 (from oauth2client)
+  Downloading pyasn1_modules-0.2.1-py2.py3-none-any.whl (60kB)
+    100% |████████████████████████████████| 61kB 3.1MB/s 
+Requirement already satisfied: six>=1.6.1 in /usr/lib/python2.7/site-packages (from oauth2client)
+Collecting httplib2>=0.9.1 (from oauth2client)
+  Downloading httplib2-0.10.3.tar.gz (204kB)
+    100% |████████████████████████████████| 204kB 2.6MB/s 
+Requirement already satisfied: rsa>=3.1.4 in /usr/lib/python2.7/site-packages (from oauth2client)
+Installing collected packages: pyasn1-modules, httplib2, oauth2client
+  Running setup.py install for httplib2 ... done
+Successfully installed httplib2-0.10.3 oauth2client-4.1.2 pyasn1-modules-0.2.1
+[root@admin carlosaguilar1928]# pip install --upgrade google-api-python-client
+Collecting google-api-python-client
+  Downloading google_api_python_client-1.6.5-py2.py3-none-any.whl (53kB)
+    100% |████████████████████████████████| 61kB 2.0MB/s 
+Requirement already up-to-date: httplib2<1dev,>=0.9.2 in /usr/lib/python2.7/site-packages (from google-api-python-client)
+Requirement already up-to-date: oauth2client<5.0.0dev,>=1.5.0 in /usr/lib/python2.7/site-packages (from google-api-python-client)
+Collecting uritemplate<4dev,>=3.0.0 (from google-api-python-client)
+  Downloading uritemplate-3.0.0-py2.py3-none-any.whl
+Collecting six<2dev,>=1.6.1 (from google-api-python-client)
+  Downloading six-1.11.0-py2.py3-none-any.whl
+Collecting pyasn1>=0.1.7 (from oauth2client<5.0.0dev,>=1.5.0->google-api-python-client)
+  Downloading pyasn1-0.4.2-py2.py3-none-any.whl (71kB)
+    100% |████████████████████████████████| 71kB 3.3MB/s 
+Requirement already up-to-date: pyasn1-modules>=0.0.5 in /usr/lib/python2.7/site-packages (from oauth2client<5.0.0dev,>=1.5.0->google-api-python-client)
+Collecting rsa>=3.1.4 (from oauth2client<5.0.0dev,>=1.5.0->google-api-python-client)
+  Downloading rsa-3.4.2-py2.py3-none-any.whl (46kB)
+    100% |████████████████████████████████| 51kB 4.2MB/s 
+Installing collected packages: uritemplate, six, google-api-python-client, pyasn1, rsa
+  Found existing installation: six 1.9.0
+    Uninstalling six-1.9.0:
+      Successfully uninstalled six-1.9.0
+  Found existing installation: pyasn1 0.1.9
+    Uninstalling pyasn1-0.1.9:
+      Successfully uninstalled pyasn1-0.1.9
+  Found existing installation: rsa 3.4.1
+    Uninstalling rsa-3.4.1:
+      Successfully uninstalled rsa-3.4.1
+Successfully installed google-api-python-client-1.6.5 pyasn1-0.4.2 rsa-3.4.2 six-1.11.0 uritemplate-3.0.0
+[root@admin carlosaguilar1928]# yum install git
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirror.linux.duke.edu
+ * epel: mirror.cogentco.com
+ * extras: repo1.ash.innoscale.net
+ * updates: ftp.osuosl.org
+Resolving Dependencies
+--> Running transaction check
+---> Package git.x86_64 0:1.8.3.1-12.el7_4 will be installed
+--> Processing Dependency: perl-Git = 1.8.3.1-12.el7_4 for package: git-1.8.3.1-12.el7_4.x86_64
+--> Processing Dependency: perl(Term::ReadKey) for package: git-1.8.3.1-12.el7_4.x86_64
+--> Processing Dependency: perl(Git) for package: git-1.8.3.1-12.el7_4.x86_64
+--> Processing Dependency: perl(Error) for package: git-1.8.3.1-12.el7_4.x86_64
+--> Processing Dependency: libgnome-keyring.so.0()(64bit) for package: git-1.8.3.1-12.el7_4.x86_64
+--> Running transaction check
+---> Package libgnome-keyring.x86_64 0:3.12.0-1.el7 will be installed
+---> Package perl-Error.noarch 1:0.17020-2.el7 will be installed
+---> Package perl-Git.noarch 0:1.8.3.1-12.el7_4 will be installed
+---> Package perl-TermReadKey.x86_64 0:2.30-20.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+===================================================================================================================
+ Package                        Arch                 Version                           Repository             Size
+===================================================================================================================
+Installing:
+ git                            x86_64               1.8.3.1-12.el7_4                  updates               4.4 M
+Installing for dependencies:
+ libgnome-keyring               x86_64               3.12.0-1.el7                      base                  109 k
+ perl-Error                     noarch               1:0.17020-2.el7                   base                   32 k
+ perl-Git                       noarch               1.8.3.1-12.el7_4                  updates                53 k
+ perl-TermReadKey               x86_64               2.30-20.el7                       base                   31 k
+
+Transaction Summary
+===================================================================================================================
+Install  1 Package (+4 Dependent packages)
+
+Total download size: 4.6 M
+Installed size: 23 M
+Is this ok [y/d/N]: y
+Downloading packages:
+(1/5): perl-Git-1.8.3.1-12.el7_4.noarch.rpm                                                 |  53 kB  00:00:00     
+(2/5): perl-Error-0.17020-2.el7.noarch.rpm                                                  |  32 kB  00:00:00     
+(3/5): libgnome-keyring-3.12.0-1.el7.x86_64.rpm                                             | 109 kB  00:00:00     
+(4/5): git-1.8.3.1-12.el7_4.x86_64.rpm                                                      | 4.4 MB  00:00:00     
+(5/5): perl-TermReadKey-2.30-20.el7.x86_64.rpm                                              |  31 kB  00:00:00     
+-------------------------------------------------------------------------------------------------------------------
+Total                                                                              6.0 MB/s | 4.6 MB  00:00:00     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : 1:perl-Error-0.17020-2.el7.noarch                                                               1/5 
+  Installing : perl-TermReadKey-2.30-20.el7.x86_64                                                             2/5 
+  Installing : libgnome-keyring-3.12.0-1.el7.x86_64                                                            3/5 
+  Installing : perl-Git-1.8.3.1-12.el7_4.noarch                                                                4/5 
+  Installing : git-1.8.3.1-12.el7_4.x86_64                                                                     5/5 
+  Verifying  : git-1.8.3.1-12.el7_4.x86_64                                                                     1/5 
+  Verifying  : 1:perl-Error-0.17020-2.el7.noarch                                                               2/5 
+  Verifying  : libgnome-keyring-3.12.0-1.el7.x86_64                                                            3/5 
+  Verifying  : perl-Git-1.8.3.1-12.el7_4.noarch                                                                4/5 
+  Verifying  : perl-TermReadKey-2.30-20.el7.x86_64                                                             5/5 
+
+Installed:
+  git.x86_64 0:1.8.3.1-12.el7_4                                                                                    
+
+Dependency Installed:
+  libgnome-keyring.x86_64 0:3.12.0-1.el7   perl-Error.noarch 1:0.17020-2.el7   perl-Git.noarch 0:1.8.3.1-12.el7_4  
+  perl-TermReadKey.x86_64 0:2.30-20.el7   
+
+Complete!
+[root@admin carlosaguilar1928]# git clone https://github.com/nic-instruction/NTI-300-2017.git
+Cloning into 'NTI-300-2017'...
+remote: Counting objects: 68, done.
+remote: Total 68 (delta 0), reused 0 (delta 0), pack-reused 68
+Unpacking objects: 100% (68/68), done.
+[root@admin carlosaguilar1928]# ls
+NTI-300-2017
+[root@admin carlosaguilar1928]# cd NTI-300-2017/
+[root@admin NTI-300-2017]# ls
+AWS  gcloud  intro_to_automation  README.md
+[root@admin NTI-300-2017]# cd gcloud/
+#!/usr/bin/python
+[root@admin gcloud]# ls
+create_http.py  createinstance2.py  create_ldap.py  README.md  startup-script.sh
+[root@admin gcloud]# cd ../..
+[root@admin carlosaguilar1928]# history
+    1  yum install google-cloud.sdk
+    2  glcloud init
+    3  gcloud init
+    4  gcloud help
+    5  gcloud compute instances list
+    6  yum install python-pip
+    7  pip install --upgrade pip
+    8  pip install oauth2client
+    9  pip install --upgrade google-api-python-client
+   10  yum install git
+   11  git clone https://github.com/nic-instruction/NTI-300-2017.git
+   12  ls
+   13  cd NTI-300-2017/
+   14  ls
+   15  cd gcloud/
+   16  ls
+   17  cd ../..
+   18  history
+[root@admin carlosaguilar1928]# cd NTI-300-2017/
+[root@admin NTI-300-2017]# ls
+AWS  gcloud  intro_to_automation  README.md
+[root@admin NTI-300-2017]# cd gcloud/
+[root@admin gcloud]# ls
+create_http.py  createinstance2.py  create_ldap.py  README.md  startup-script.sh
+[root@admin gcloud]# python createinstance2.py 
+Traceback (most recent call last):
+  File "createinstance2.py", line 25, in <module>
+    newinstance = create_instance(compute, project, zone, name)
+  File "/home/carlosaguilar1928/NTI-300-2017/gcloud/create_ldap.py", line 71, in create_instance
+    body=config).execute()
+  File "/usr/lib/python2.7/site-packages/oauth2client/_helpers.py", line 133, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/googleapiclient/http.py", line 844, in execute
+    raise HttpError(resp, content, uri=self.uri)
+googleapiclient.errors.HttpError: <HttpError 403 when requesting https://www.googleapis.com/compute/v1/projects/instructor-nti-300-2018/zones/us-east1-b/instances?alt=json returned "Required 'compute.instances.setLabels' permission for 'projects/instructor-nti-300-2018/zones/us-east1-b/instances/test3'">
+[root@admin gcloud]# vim createinstance2.py
+[root@admin gcloud]# ls
+create_http.py  createinstance2.py  create_ldap.py  create_ldap.pyc  README.md  startup-script.sh
+[root@admin gcloud]# vim createinstance2.py 
+[root@admin gcloud]# python createinstance2.py 
+{u'id': u'416433013261694875',
+ u'insertTime': u'2018-03-01T19:48:05.165-08:00',
+ u'kind': u'compute#operation',
+ u'name': u'operation-1519962484203-56665d7f15df9-6be039f8-78e5f4c5',
+ u'operationType': u'insert',
+ u'progress': 0,
+ u'selfLink': u'https://www.googleapis.com/compute/v1/projects/intense-reason-191902/zones/us-east1-b/operations/operation-1519962484203-56665d7f15df9-6be039f8-78e5f4c5',
+ u'status': u'PENDING',
+ u'targetId': u'6535497594460010395',
+ u'targetLink': u'https://www.googleapis.com/compute/v1/projects/intense-reason-191902/zones/us-east1-b/instances/test3',
+ u'user': u'247899449751-compute@developer.gserviceaccount.com',
+ u'zone': u'https://www.googleapis.com/compute/v1/projects/intense-reason-191902/zones/us-east1-b'}
+[{u'canIpForward': False,
+  u'cpuPlatform': u'Intel Haswell',
+  u'creationTimestamp': u'2018-03-01T19:20:16.674-08:00',
+  u'deletionProtection': False,
+  u'description': u'',
+  u'disks': [{u'autoDelete': True,
+              u'boot': True,
+              u'deviceName': u'admin',
+              u'index': 0,
+              u'interface': u'SCSI',
+              u'kind': u'compute#attachedDisk',
+              u'licenses': [u'https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7'],
+              u'mode': u'READ_WRITE',
+              u'source': u'https://www.googleapis.com/compute/v1/projects/intense-reason-191902/zones/us-east1-b/disks/admin',
+              u'type': u'PERSISTENT'}],
+  u'id': u'5857002734329625631',
+  u'kind': u'compute#instance',
+  u'labelFingerprint': u'42WmSpB8rSM=',
+  u'machineType': u'https://www.googleapis.com/compute/v1/projects/intense-reason-191902/zones/us-east1-b/machineTypes/f1-micro',
+  u'metadata': {u'fingerprint': u'VA8iEUsm_Gc=',
+                u'kind': u'compute#metadata'},
+  u'name': u'admin',
+  u'networkInterfaces': [{u'accessConfigs': [{u'kind': u'compute#accessConfig',
+                                              u'name': u'External NAT',
+                                              u'natIP': u'35.227.18.70',
+                                              u'type': u'ONE_TO_ONE_NAT'}],
+                          u'kind': u'compute#networkInterface',
+                          u'name': u'nic0',
+                          u'network': u'https://www.googleapis.com/compute/v1/projects/intense-reason-191902/global/networks/default',
+                          u'networkIP': u'10.142.0.4',
+                          u'subnetwork': u'https://www.googleapis.com/compute/v1/projects/intense-reason-191902/regions/us-east1/subnetworks/default'}],
+  u'scheduling': {u'automaticRestart': True,
+                  u'onHostMaintenance': u'MIGRATE',
+                  u'preemptible': False},
+  u'selfLink': u'https://www.googleapis.com/compute/v1/projects/intense-reason-191902/zones/us-east1-b/instances/admin',
+  u'serviceAccounts': [{u'email': u'247899449751-compute@developer.gserviceaccount.com',
+                        u'scopes': [u'https://www.googleapis.com/auth/cloud-platform']}],
+  u'startRestricted': False,
+  u'status': u'RUNNING',
+  u'tags': {u'fingerprint': u'42WmSpB8rSM='},
+  u'zone': u'https://www.googleapis.com/compute/v1/projects/intense-reason-191902/zones/us-east1-b'},
+ {u'canIpForward': False,
+  u'cpuPlatform': u'Unknown CPU Platform',
+  u'creationTimestamp': u'2018-01-11T20:10:31.475-08:00',
+  u'deletionProtection': False,
+  u'description': u'',
+  u'disks': [{u'autoDelete': True,
+              u'boot': True,
+              u'deviceName': u'apache-server2',
+              u'index': 0,
+              u'interface': u'SCSI',
+              u'kind': u'compute#attachedDisk',
+              u'licenses': [u'https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7'],
+              u'mode': u'READ_WRITE',
+              u'source': u'https://www.googleapis.com/compute/v1/projects/intense-reason-191902/zones/us-east1-b/disks/apache-server2',
+              u'type': u'PERSISTENT'}],
+  u'id': u'715464583635373017',
+  u'kind': u'compute#instance',
+  u'labelFingerprint': u'42WmSpB8rSM=',
+  u'machineType': u'https://www.googleapis.com/compute/v1/projects/intense-reason-191902/zones/us-east1-b/machineTypes/f1-micro',
+  u'metadata': {u'fingerprint': u'VA8iEUsm_Gc=',
+                u'kind': u'compute#metadata'},
+  u'name': u'apache-server2',
+  u'networkInterfaces': [{u'accessConfigs': [{u'kind': u'compute#accessConfig',
+                                              u'name': u'External NAT',
+                                              u'type': u'ONE_TO_ONE_NAT'}],
+                          u'kind': u'compute#networkInterface',
+                          u'name': u'nic0',
+                          u'network': u'https://www.googleapis.com/compute/v1/projects/intense-reason-191902/global/networks/default',
+                          u'networkIP': u'10.142.0.3',
+                          u'subnetwork': u'https://www.googleapis.com/compute/v1/projects/intense-reason-191902/regions/us-east1/subnetworks/default'}],
+  u'scheduling': {u'automaticRestart': True,
+                  u'onHostMaintenance': u'MIGRATE',
+                  u'preemptible': False},
+  u'selfLink': u'https://www.googleapis.com/compute/v1/projects/intense-reason-191902/zones/us-east1-b/instances/apache-server2',
+  u'serviceAccounts': [{u'email': u'247899449751-compute@developer.gserviceaccount.com',
+                        u'scopes': [u'https://www.googleapis.com/auth/devstorage.read_only',
+                                    u'https://www.googleapis.com/auth/logging.write',
+                                    u'https://www.googleapis.com/auth/monitoring.write',
+                                    u'https://www.googleapis.com/auth/servicecontrol',
+                                    u'https://www.googleapis.com/auth/service.management.readonly',
+                                    u'https://www.googleapis.com/auth/trace.append']}],
+  u'startRestricted': False,
+  u'status': u'TERMINATED',
+  u'tags': {u'fingerprint': u'6smc4R4d39I=',
+            u'items': [u'http-server', u'https-server']},
+  u'zone': u'https://www.googleapis.com/compute/v1/projects/intense-reason-191902/zones/us-east1-b'},
+ {u'canIpForward': False,
+  u'cpuPlatform': u'Unknown CPU Platform',
+  u'creationTimestamp': u'2018-02-15T18:13:46.310-08:00',
+  u'deletionProtection': False,
+  u'description': u'',
+  u'disks': [{u'autoDelete': True,
+              u'boot': True,
+              u'deviceName': u'django',
+              u'index': 0,
+              u'interface': u'SCSI',
+              u'kind': u'compute#attachedDisk',
+              u'licenses': [u'https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7'],
+              u'mode': u'READ_WRITE',
+              u'source': u'https://www.googleapis.com/compute/v1/projects/intense-reason-191902/zones/us-east1-b/disks/django',
+              u'type': u'PERSISTENT'}],
+  u'id': u'7484575372762906806',
+  u'kind': u'compute#instance',
+  u'labelFingerprint': u'42WmSpB8rSM=',
+  u'machineType': u'https://www.googleapis.com/compute/v1/projects/intense-reason-191902/zones/us-east1-b/machineTypes/f1-micro',
+  u'metadata': {u'fingerprint': u'VA8iEUsm_Gc=',
+                u'kind': u'compute#metadata'},
+  u'name': u'django',
+  u'networkInterfaces': [{u'accessConfigs': [{u'kind': u'compute#accessConfig',
+                                              u'name': u'External NAT',
+                                              u'type': u'ONE_TO_ONE_NAT'}],
+                          u'kind': u'compute#networkInterface',
+                          u'name': u'nic0',
+                          u'network': u'https://www.googleapis.com/compute/v1/projects/intense-reason-191902/global/networks/default',
+                          u'networkIP': u'10.142.0.2',
+                          u'subnetwork': u'https://www.googleapis.com/compute/v1/projects/intense-reason-191902/regions/us-east1/subnetworks/default'}],
+  u'scheduling': {u'automaticRestart': True,
+                  u'onHostMaintenance': u'MIGRATE',
+                  u'preemptible': False},
+  u'selfLink': u'https://www.googleapis.com/compute/v1/projects/intense-reason-191902/zones/us-east1-b/instances/django',
+  u'serviceAccounts': [{u'email': u'247899449751-compute@developer.gserviceaccount.com',
+                        u'scopes': [u'https://www.googleapis.com/auth/devstorage.read_only',
+                                    u'https://www.googleapis.com/auth/logging.write',
+                                    u'https://www.googleapis.com/auth/monitoring.write',
+                                    u'https://www.googleapis.com/auth/servicecontrol',
+                                    u'https://www.googleapis.com/auth/service.management.readonly',
+                                    u'https://www.googleapis.com/auth/trace.append']}],
+  u'startRestricted': False,
+  u'status': u'TERMINATED',
+  u'tags': {u'fingerprint': u'6smc4R4d39I=',
+            u'items': [u'http-server', u'https-server']},
+  u'zone': u'https://www.googleapis.com/compute/v1/projects/intense-reason-191902/zones/us-east1-b'},
+ {u'cpuPlatform': u'Unknown CPU Platform',
+  u'creationTimestamp': u'2018-03-01T19:48:05.019-08:00',
+  u'deletionProtection': False,
+  u'disks': [{u'autoDelete': True,
+              u'boot': True,
+              u'deviceName': u'persistent-disk-0',
+              u'index': 0,
+    1  yum install google-cloud.sdk
+              u'interface': u'SCSI',
+              u'kind': u'compute#attachedDisk',
+              u'licenses': [u'https://www.googleapis.com/compute/v1/projects/centos-cloud/global/licenses/centos-7'
+],
+              u'mode': u'READ_WRITE',
+              u'source': u'https://www.googleapis.com/compute/v1/projects/intense-reason-191902/zones/us-east1-b/di
+sks/test3',
+              u'type': u'PERSISTENT'}],
+  u'id': u'6535497594460010395',
+  u'kind': u'compute#instance',
+  u'labelFingerprint': u'6smc4R4d39I=',
+  u'labels': {u'http-server': u'', u'https-server': u''},
+  u'machineType': u'https://www.googleapis.com/compute/v1/projects/intense-reason-191902/zones/us-east1-b/machineTy
+pes/f1-micro',
+  u'metadata': {u'fingerprint': u'3xTsO54PqCw=',
+                u'items': [{u'key': u'startup-script',
+                            u'value': u'#!/bin/bash\necho "yaaaaah hoooooooooooo"\n\nyum -y install httpd\nsystemct
+l enable httpd\nsystemctl start httpd\n'}],
+                u'kind': u'compute#metadata'},
+  u'name': u'test3',
+  u'networkInterfaces': [{u'accessConfigs': [{u'kind': u'compute#accessConfig',
+                                              u'name': u'External NAT',
+                                              u'type': u'ONE_TO_ONE_NAT'}],
+                          u'kind': u'compute#networkInterface',
+                          u'name': u'nic0',
+                          u'network': u'https://www.googleapis.com/compute/v1/projects/intense-reason-191902/global
+/networks/default',
+                          u'subnetwork': u'https://www.googleapis.com/compute/v1/projects/intense-reason-191902/reg
+ions/us-east1/subnetworks/default'}],
+  u'scheduling': {u'automaticRestart': True,
+                  u'onHostMaintenance': u'MIGRATE',
+                  u'preemptible': False},
+  u'selfLink': u'https://www.googleapis.com/compute/v1/projects/intense-reason-191902/zones/us-east1-b/instances/te
+st3',
+  u'serviceAccounts': [{u'email': u'247899449751-compute@developer.gserviceaccount.com',
+                        u'scopes': [u'https://www.googleapis.com/auth/devstorage.read_write',
+                                    u'https://www.googleapis.com/auth/logging.write']}],
+  u'startRestricted': False,
+  u'status': u'PROVISIONING',
+  u'tags': {u'fingerprint': u'6smc4R4d39I=',
+            u'items': [u'http-server', u'https-server']},
+  u'zone': u'https://www.googleapis.com/compute/v1/projects/intense-reason-191902/zones/us-east1-b'}]
+[root@admin gcloud]# 
