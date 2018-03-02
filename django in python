@@ -31,6 +31,6 @@ def start_django():
  
 setup_install()
 install_django()
-allowed_host()
+#allowed_host()
 start_django()
   
