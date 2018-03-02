@@ -3,7 +3,7 @@
 import os
 
 def setup_install():
-  os.system('yum install -y python-pip) 
+  os.system('yum install -y python-pip') 
   os.system('pip install -y virtualenv')
   os.system('pip install --upgrade pip -y') 
   os.mkdir('/opt/django')
