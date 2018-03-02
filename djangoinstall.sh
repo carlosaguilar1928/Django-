@@ -4,15 +4,12 @@
    pip install --upgrade pip
    mkdir /opt/django
    cd /opt/django
-   python --version
    yum install -y epel-release
    yum install -y python34 python-pip 
    virtualenv -p python3 django
-   cd django
+   cd opt/django
    source bin/activate
-   
    pip install django 
-   
    django-admin startproject project1
    chown -R carlosaguilar1928 django
    ls -l django/django
