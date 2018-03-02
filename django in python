@@ -20,8 +20,8 @@ def install_django():
   os.system('django-admin startproject project1')
   os.system('chown -R carlosaguilar1928 django')
   
-def allowed_host():
-  os.system('myip=$( curl https://api.ipify.org ) && sed -i "s/ALLOWED_HOSTS = \[\]/ALLOWED_HOSTS = \[\ '"$myip"\'/g" /opt/django/django/project1/project1/setting.py
+#def allowed_host():
+#  os.system('myip=$( curl https://api.ipify.org ) && sed -i "s/ALLOWED_HOSTS = \[\]/ALLOWED_HOSTS = \[\ '"$myip"\'/g" /opt/django/django/project1/project1/setting.py
  
 def start_django():
   os.system('sudo su -u -carlosaguilar1928 && source /opt/django/django/bin/activate')
