@@ -15,8 +15,8 @@ def setup_install():
   os.system('source /opt/django/django/bin/activate')
 
 def install_django(): 
-  os.system('pip install django') 
-  os.system('django-admin startproject project1')
+  os.system('pip install django && source /opt/django/django/bin/activate') 
+  os.system('django-admin startproject project1 && source /opt/django/django/bin/activate')
   os.system('chown -R carlosaguilar1928 /opt/django/*')
   os.system('source /opt/django/django/bin/activate')
   
@@ -25,11 +25,10 @@ def allowed_host():
   os.system('myip=( curl https://api.ipify.org ) && sed -i "s/ALLOWED_HOST = \[\]/ALLOWED_HOSTS = \['"$myip"'\]/g" /opt/django/django/project1/project1/settings.py')
   
 def start_django():
-  os.system('sudo -u carlosaguilar1928')
-  os.system('/opt/django/django/project1/manage.py runserver 0.0.0.0:8000&')
+  os.system('sudo -u carlosaguilar1928 -E sh -c "' + \
+            'source /opt/django/django/bin/activate && ' + \
+            '/opt/django/django/project1/manage.py runserver 0.0.0.0:8000&"')
   os.system('yum install git -y)
-  
-  
  
 setup_install()
 install_django()
