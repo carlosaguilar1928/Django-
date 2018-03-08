@@ -15,8 +15,8 @@ def setup_install():
   os.system('source /opt/django/django/bin/activate')
 
 def install_django(): 
-  os.system('pip install django && source /opt/django/django/bin/activate') 
-  os.system('django-admin startproject project1 && source /opt/django/django/bin/activate')
+  os.system('source /opt/django/django/bin/activate && pip install django') 
+  os.system('source /opt/django/django/bin/activate && django-admin startproject project1')
   os.system('chown -R carlosaguilar1928 /opt/django/*')
   os.system('source /opt/django/django/bin/activate')
   
