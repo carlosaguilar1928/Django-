@@ -28,7 +28,7 @@ def start_django():
   os.system('sudo -u carlosaguilar1928 -E sh -c "' + \
             'source /opt/django/django/bin/activate && ' + \
             '/opt/django/django/project1/manage.py runserver 0.0.0.0:8000&"')
-  os.system('yum install git -y)
+  os.system('yum install git -y')
  
 setup_install()
 install_django()
