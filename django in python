@@ -15,8 +15,7 @@ def setup_install():
   os.system('source /opt/django/django/bin/activate')
 
 def install_django(): 
-  os.system('pip install django') 
-  os.system('django-admin startproject project1')
+  os.system('source /opt/django/django/bin/activate && pip install django && django-admin startproject project1')
   os.system('chown -R carlosaguilar1928 /opt/django/*')
   
 def allowed_host():
