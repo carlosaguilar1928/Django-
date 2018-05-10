@@ -4,8 +4,23 @@
    pip install --upgrade pip
    
    # setting up the django environment
-   mkdir /opt/django
-   cd /opt/django
+   mkdir /opt/myproject
+   cd /opt/myproject
+   virtualenv myprojectenv
+   source myprojectenv/bin/activate
+   pip install django psycopg2
+   django-admin.py startproject myproject .
+   
+   yum install tree -y
+   tree myproject
+   # these commands are just for visual effect
+   
+  vim myproject/settings.py
+  # 
+   
+   
+   
+   ##### old stuff###
    yum install epel-release -y
    yum install python34 -y
    virtualenv -p python3 django
