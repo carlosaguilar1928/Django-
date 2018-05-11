@@ -1,0 +1,14 @@
+#!/bin/bash
+
+yum -y install httpd                                # this install apache
+systemctl enable httpd                              # this enables apache
+systemctl start httpd                               # this starts our apache server
+yum -y install mod_ssl                              # this install the encryption for our apache server
+systemctl restart httpd
+
+sed -i 's/^/#/g' /etc/httpd/conf.d/welcome.conf          #commenting out welcome.conf
+echo -e "<html> \n<h1> Hello Friends, Welcome to my NTI Webpage </h1> \n<h2> I'm glad that your are here </h2> \n</html>" > /var/www/html/index.html     
+
+#on 1/20/2018 second line was added to the website 
+
+#"sudo su" was used for this script since line 10 "echo" was not getting acknowledged
