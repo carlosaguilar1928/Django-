@@ -1,22 +1,55 @@
 #!/bin/bash
-   yum install python-pip -y
-   pip install virtualenv
-   pip install --upgrade pip
+
+yum install python-pip -y
+pip install virtualenv
+pip install --upgrade pip
    
-   # setting up the django environment
-   mkdir /opt/myproject
-   cd /opt/myproject
-   virtualenv myprojectenv
-   source myprojectenv/bin/activate
-   pip install django psycopg2
-   django-admin.py startproject myproject .
+# setting up the django environment
+mkdir /opt/myproject
+cd /opt/myproject
+virtualenv myprojectenv
+source myprojectenv/bin/activate
+pip install django psycopg2
+django-admin.py startproject myproject .
    
-   yum install tree -y
-   tree myproject
-   # these commands are just for visual effect
+# these commands are just for visual effect
+   # yum install tree -y
+   # tree myproject
    
-  vim myproject/settings.py
-  # 
+cd ..
+vim /opt/myproject/myproject/settings.py
+
+# this finds this file and return the path to you
+   #find / -name "settings.py"      
+
+#this previous line must be inserted into the settings.py file
+#comment out the current DATABASE part and paste the new information  
+
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+ #   }
+#}
+
+# . . .   
+
+#this previous line must be inserted into the settings.py file
+#comment out the current DATABASE part and paste the new information 
+
+
+#enter this into the settings.py file and edit it
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'myproject',
+        'USER': 'myprojectuser',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
+#change the host, port, password. host would be the internal ip for your postgress, port is 5432, enter the password you created for the Postgress server. 
    
    
    
