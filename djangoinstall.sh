@@ -17,14 +17,10 @@ django-admin.py startproject myproject .
    # tree myproject
    
 cd ..
+#this finds this file and return the path to you.     ex. find / -name "settings.py" 
 vim /opt/myproject/myproject/settings.py
 
-# this finds this file and return the path to you
-   #find / -name "settings.py"      
-
-#this previous line must be inserted into the settings.py file
 #comment out the current DATABASE part and paste the new information  
-
 #DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.sqlite3',
@@ -32,24 +28,23 @@ vim /opt/myproject/myproject/settings.py
  #   }
 #}
 
-# . . .   
-
-#this previous line must be inserted into the settings.py file
-#comment out the current DATABASE part and paste the new information 
-
-
+#this following line must be inserted into the settings.py file either manually or thru echo. 
 #enter this into the settings.py file and edit it
-DATABASES = {
+echo "DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'myproject',
         'USER': 'myprojectuser',
         'PASSWORD': 'password',
-        'HOST': 'localhost',
-        'PORT': '',
+        'HOST': '10.142.0.6',
+        'PORT': '5432',
     }
-}
-#change the host, port, password. host would be the internal ip for your postgress, port is 5432, enter the password you created for the Postgress server. 
+} > /opt/myproject/myproject/settings.py
+
+#change the host, port, password. 
+#host would be the internal ip for your postgress
+#port is 5432
+#enter the password you created for the Postgress server. 
    
    
    
